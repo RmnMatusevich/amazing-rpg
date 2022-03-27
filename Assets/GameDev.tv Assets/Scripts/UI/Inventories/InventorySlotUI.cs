@@ -13,13 +13,13 @@ namespace GameDevTV.UI.Inventories
 
         // STATE
         int index;
+        InventoryItem item;
         Inventory inventory;
 
         // PUBLIC
 
         public void Setup(Inventory inventory, int index)
         {
-            print("SETUP - " + inventory);
             this.inventory = inventory;
             this.index = index;
             icon.SetItem(inventory.GetItemInSlot(index));
@@ -41,8 +41,6 @@ namespace GameDevTV.UI.Inventories
 
         public InventoryItem GetItem()
         {
-            print("INDEX " + index);
-            print("inventory -- " + inventory);
             return inventory.GetItemInSlot(index);
         }
 

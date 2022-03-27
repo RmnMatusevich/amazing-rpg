@@ -16,5 +16,5 @@ MonoBehaviour:
   displayName: Dagger
   description: Pointy and sharp
   icon: {fileID: 21300000, guid: d19901b0ee3c38743a7d383bd484b0b5, type: 3}
-  pickup: {fileID: 6494234044896430859, guid: ab73185f2dadf4445ae07e78eb669c1f, type: 3}
+  pickup: {fileID: 6494234044896430859, guid: b13d60fec26324f01849b907208d92b2, type: 3}
   stackable: 0

@@ -19,9 +19,8 @@ namespace GameDevTV.UI.Inventories
 
         // LIFECYCLE METHODS
 
-        private void Awake()
+        private void Awake() 
         {
-            print("AWAKE");
             playerInventory = Inventory.GetPlayerInventory();
             playerInventory.inventoryUpdated += Redraw;
         }
@@ -39,14 +38,10 @@ namespace GameDevTV.UI.Inventories
             {
                 Destroy(child.gameObject);
             }
-            print("playerInventory " + playerInventory);
+
             for (int i = 0; i < playerInventory.GetSize(); i++)
             {
                 var itemUI = Instantiate(InventoryItemPrefab, transform);
-                print("itemUI " + itemUI);
-
-                print("playerInventory 222" + playerInventory);
-
                 itemUI.Setup(playerInventory, i);
             }
         }

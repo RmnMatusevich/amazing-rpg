@@ -93,7 +93,6 @@ namespace GameDevTV.Inventories
         /// </summary>
         public InventoryItem GetItemInSlot(int slot)
         {
-            print("InventoryItem " + slots);
             return slots[slot];
         }
 
@@ -102,7 +101,6 @@ namespace GameDevTV.Inventories
         /// </summary>
         public void RemoveFromSlot(int slot)
         {
-            print("RemoveFromSlot");
             slots[slot] = null;
             if (inventoryUpdated != null)
             {
@@ -120,7 +118,6 @@ namespace GameDevTV.Inventories
         /// <returns>True if the item was added anywhere in the inventory.</returns>
         public bool AddItemToSlot(int slot, InventoryItem item)
         {
-            print("AddItemToSlot");
             if (slots[slot] != null)
             {
                 return AddToFirstEmptySlot(item); ;
@@ -139,8 +136,6 @@ namespace GameDevTV.Inventories
         private void Awake()
         {
             slots = new InventoryItem[inventorySize];
-            slots[0] = InventoryItem.GetFromID("71e73607-4bac-4e42-b7d6-5e6f91e92dc4");
-            slots[1] = InventoryItem.GetFromID("0aa7c8b8-4796-42aa-89d0-9d100ea67d7b");
         }
 
         /// <summary>
