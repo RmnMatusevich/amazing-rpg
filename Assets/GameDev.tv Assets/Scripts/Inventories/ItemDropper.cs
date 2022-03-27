@@ -19,9 +19,9 @@ namespace GameDevTV.Inventories
         /// Create a pickup at the current position.
         /// </summary>
         /// <param name="item">The item type for the pickup.</param>
-        public void DropItem(InventoryItem item)
+        public void DropItem(InventoryItem item, int number)
         {
-            SpawnPickup(item, GetDropLocation());
+            SpawnPickup(item, number, GetDropLocation());
         }
 
         // PROTECTED
@@ -37,9 +37,9 @@ namespace GameDevTV.Inventories
 
         // PRIVATE
 
-        public void SpawnPickup(InventoryItem item, Vector3 spawnLocation)
+        public void SpawnPickup(InventoryItem item, int number, Vector3 spawnLocation)
         {
-            var pickup = item.SpawnPickup(spawnLocation);
+            var pickup = item.SpawnPickup(spawnLocation, number);
             droppedItems.Add(pickup);
         }
 
@@ -48,6 +48,7 @@ namespace GameDevTV.Inventories
         {
             public string itemID;
             public SerializableVector3 position;
+            public int number;
         }
 
         object ISaveable.CaptureState()
@@ -58,7 +59,9 @@ namespace GameDevTV.Inventories
             {
                 droppedItemsList[i].itemID = droppedItems[i].GetItem().GetItemID();
                 droppedItemsList[i].position = new SerializableVector3(droppedItems[i].transform.position);
+                droppedItemsList[i].number = droppedItems[i].GetNumber();
             }
+
             return droppedItemsList;
         }
 
@@ -69,7 +72,8 @@ namespace GameDevTV.Inventories
             {
                 var pickupItem = InventoryItem.GetFromID(item.itemID);
                 Vector3 position = item.position.ToVector();
-                SpawnPickup(pickupItem, position);
+                int number = item.number;
+                SpawnPickup(pickupItem, number, position);
             }
         }
 

@@ -20,7 +20,6 @@ namespace InventoryExample.UI
         {
             if (Input.GetKeyDown(toggleKey))
             {
-                print("TOGGLE UI");
                 uiContainer.SetActive(!uiContainer.activeSelf);
             }
         }

@@ -8,7 +8,6 @@ namespace RPG.Core
         void Start()
         {
             Material material = GetComponent<MeshRenderer>().material;
-            print("LOLO" + GetComponent<MeshRenderer>().material);
             material.color = new Color(1.0f, 1.0f, 1.0f, 0.1f);
 
             material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);

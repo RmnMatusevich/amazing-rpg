@@ -13,14 +13,15 @@ namespace GameDevTV.Inventories
     /// `EquipableItem`.
     /// </remarks>
     [CreateAssetMenu(menuName = ("GameDevTV/Inventory/Item"))]
-    public class InventoryItem : ScriptableObject, ISerializationCallbackReceiver    {
+    public class InventoryItem : ScriptableObject, ISerializationCallbackReceiver
+    {
         // CONFIG DATA
         [Tooltip("Auto-generated UUID for saving/loading. Clear this field if you want to generate a new one.")]
         [SerializeField] string itemID = null;
         [Tooltip("Item name to be displayed in UI.")]
         [SerializeField] string displayName = null;
         [Tooltip("Item description to be displayed in UI.")]
-        [SerializeField][TextArea] string description = null;
+        [SerializeField] [TextArea] string description = null;
         [Tooltip("The UI icon to represent this item in the inventory.")]
         [SerializeField] Sprite icon = null;
         [Tooltip("The prefab that should be spawned when this item is dropped.")]
@@ -63,17 +64,17 @@ namespace GameDevTV.Inventories
             if (itemID == null || !itemLookupCache.ContainsKey(itemID)) return null;
             return itemLookupCache[itemID];
         }
-        
+
         /// <summary>
         /// Spawn the pickup gameobject into the world.
         /// </summary>
         /// <param name="position">Where to spawn the pickup.</param>
         /// <returns>Reference to the pickup object spawned.</returns>
-        public Pickup SpawnPickup(Vector3 position)
+        public Pickup SpawnPickup(Vector3 position, int number)
         {
             var pickup = Instantiate(this.pickup);
             pickup.transform.position = position;
-            pickup.Setup(this);
+            pickup.Setup(this, number);
             return pickup;
         }
 
@@ -91,7 +92,7 @@ namespace GameDevTV.Inventories
         {
             return stackable;
         }
-        
+
         public string GetDisplayName()
         {
             return displayName;
@@ -103,7 +104,7 @@ namespace GameDevTV.Inventories
         }
 
         // PRIVATE
-        
+
         void ISerializationCallbackReceiver.OnBeforeSerialize()
         {
             // Generate and save a new UUID if this is blank.
