@@ -20,6 +20,11 @@ namespace GameDevTV.UI.Inventories
 
         // PUBLIC
 
+        public void SetItem(InventoryItem item)
+        {
+            SetItem(item, 0);
+        }
+
         public void SetItem(InventoryItem item, int number)
         {
             var iconImage = GetComponent<Image>();
