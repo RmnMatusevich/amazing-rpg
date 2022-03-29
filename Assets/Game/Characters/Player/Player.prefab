@@ -236,7 +236,7 @@ MonoBehaviour:
   maxNavMeshProjectionDistance: 1
   maxNavPathLength: 40
   raycastRadius: 1
---- !u!114 &2331663183215190538
+--- !u!114 &1592638383729290571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,10 +245,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4980451019148773286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8c756a4f32f0d945bb0d60bb0f29ef8, type: 3}
+  m_Script: {fileID: 11500000, guid: a19ff972ec6859b48870488d7b1e81b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4831614473189159446
+--- !u!114 &2538080416385392367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4980451019148773286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b11801ca435999e4e96afb1bcc282d56, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ce85a7be7fde47a6a9f41187776ffbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8596764994047439771
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experiencePoints: 0
---- !u!114 &1592638383729290571
+--- !u!114 &5250290532133528512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,9 +295,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4980451019148773286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19ff972ec6859b48870488d7b1e81b5, type: 3}
+  m_Script: {fileID: 11500000, guid: fee2c654e12854738b22a6b5439b99b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scatterDistance: 1
 --- !u!1001 &2610427122133611657
 PrefabInstance:
   m_ObjectHideFlags: 0

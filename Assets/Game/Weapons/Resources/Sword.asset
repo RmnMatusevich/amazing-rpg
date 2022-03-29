@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b2a3f2340004c28a06e9d685ccf448, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
+  itemID: d141f47f-f5dd-4dc8-aa32-f46579232cfc
+  displayName: Sword
+  description: GET OUT OF ME!
+  icon: {fileID: 21300000, guid: d19901b0ee3c38743a7d383bd484b0b5, type: 3}
+  pickup: {fileID: 5604122670301308642, guid: 701bf4aa46fa04404ba01642f830bbf4, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
   animatorOverride: {fileID: 22100000, guid: 3c0fcee1904fc4dd381392bf179198dc, type: 2}
   equippedPrefab: {fileID: 4026190704074348778, guid: fccecbf0b519e4a6cb446da220bd2c75, type: 3}
   weaponRange: 2
