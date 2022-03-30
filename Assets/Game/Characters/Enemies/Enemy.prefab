@@ -332,6 +332,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7057bc4e5866948c1814ee01d12a2089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1030082339008224191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3932567559220053332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee2c654e12854738b22a6b5439b99b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scatterDistance: 1
+  dropLibrary: {fileID: 11400000, guid: 66690f7dcb99741ed8ae4eb9bf91eea8, type: 2}
 --- !u!114 &3306881937600164227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,23 +366,3 @@ MonoBehaviour:
   waypointDwellTime: 3
   patrolSpeedFraction: 0.2
   shoutDistance: 5
---- !u!114 &1030082339008224191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3932567559220053332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fee2c654e12854738b22a6b5439b99b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scatterDistance: 1
-  dropLibrary:
-  - {fileID: 11400000, guid: 99971a55cd7b041be8a7c7e98b2ed094, type: 2}
-  - {fileID: 11400000, guid: 95b6a51eaa35749aca2d48ca27ebfe18, type: 2}
-  - {fileID: 11400000, guid: def2225059f07498180c1393058fc66b, type: 2}
-  - {fileID: 11400000, guid: 36170818a7c67493b9b9a0eec5bbbf4e, type: 2}
-  - {fileID: 11400000, guid: 71ae6148170454a3dacdc76f42dcc124, type: 2}
-  numberOfDrops: 4
