@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8385922333092190215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de359a0c10e0e415cad1c338f2ae96f2, type: 3}
+  m_Name: 8be63589-113f-4d0b-88ec-7703797b43a1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: When do you ask??
+  children:
+  - a868063f-8e5c-44a9-a726-0f3d0c684337
+  rect:
+    serializedVersion: 2
+    x: 283
+    y: 209
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7811584173999788596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de359a0c10e0e415cad1c338f2ae96f2, type: 3}
+  m_Name: c96bb29a-dac0-453e-81b2-94f7490e5718
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I am good
+  children:
+  - a868063f-8e5c-44a9-a726-0f3d0c684337
+  rect:
+    serializedVersion: 2
+    x: 285
+    y: 79
+    width: 200
+    height: 100
+  onEnterAction: TestSelection
+  onExitAction: 
+--- !u!114 &-7098212821849585674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de359a0c10e0e415cad1c338f2ae96f2, type: 3}
+  m_Name: 3e265eb2-4f3e-4abb-852d-5dc9be229644
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: She is good!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 860
+    y: 185
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5297625081528137630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de359a0c10e0e415cad1c338f2ae96f2, type: 3}
+  m_Name: a868063f-8e5c-44a9-a726-0f3d0c684337
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Hmm, what about your mother?
+  children:
+  - d580c158-0c95-4514-814a-c1b1d4bc90da
+  - 3e265eb2-4f3e-4abb-852d-5dc9be229644
+  rect:
+    serializedVersion: 2
+    x: 577
+    y: 139
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: TestAIExitAction
+--- !u!114 &-4474451915402546927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de359a0c10e0e415cad1c338f2ae96f2, type: 3}
+  m_Name: 239d9842-b7e5-488f-94fc-2165743edb1f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Hey, how are you?
+  children:
+  - c96bb29a-dac0-453e-81b2-94f7490e5718
+  - 8be63589-113f-4d0b-88ec-7703797b43a1
+  rect:
+    serializedVersion: 2
+    x: 13
+    y: 147
+    width: 200
+    height: 100
+  onEnterAction: TestRootEntry
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48bde304dd72e44c48204b9c281e4044, type: 3}
+  m_Name: New In Town
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -4474451915402546927}
+  - {fileID: -7811584173999788596}
+  - {fileID: -8385922333092190215}
+  - {fileID: -5297625081528137630}
+  - {fileID: 6757542362806425897}
+  - {fileID: -7098212821849585674}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &6757542362806425897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de359a0c10e0e415cad1c338f2ae96f2, type: 3}
+  m_Name: d580c158-0c95-4514-814a-c1b1d4bc90da
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Are you stupid asshole??
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 862
+    y: 74
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: Attack
