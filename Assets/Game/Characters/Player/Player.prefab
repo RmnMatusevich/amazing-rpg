@@ -316,6 +316,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experiencePoints: 0
+--- !u!114 &4529948453995901985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4980451019148773286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0a7150c9ce946aeb71c2cbc7c82131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statuses:
+  - quest: {fileID: 11400000, guid: 634e20f34cf1b4283b756d9729f50ae7, type: 2}
+    completedObjectives:
+    - Town
+    - Farm
+  - quest: {fileID: 11400000, guid: 24ca25cd55c334957b416ef1e8117842, type: 2}
+    completedObjectives:
+    - Meat
 --- !u!1001 &2610427122133611657
 PrefabInstance:
   m_ObjectHideFlags: 0
