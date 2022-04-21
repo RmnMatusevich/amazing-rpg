@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: Get me some fresh meat
   m_EditorClassIdentifier: 
   objectives:
-  - Meat
-  - Salt
+  - reference: Meat
+    description: Fresh meat YUMMY
+  - reference: Salt
+    description: What the meat could be without salt??
+  rewards:
+  - number: 1
+    item: {fileID: 11400000, guid: 95b6a51eaa35749aca2d48ca27ebfe18, type: 2}
+  - number: 3
+    item: {fileID: 11400000, guid: def2225059f07498180c1393058fc66b, type: 2}
