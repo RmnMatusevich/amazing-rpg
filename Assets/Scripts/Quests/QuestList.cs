@@ -104,9 +104,17 @@ namespace RPG.Quests
 
         bool? IPredicateEvaluator.Evaluate(string predicate, string[] parameters)
         {
-            if (predicate != "HasQuest") return null;
+            switch (predicate)
+            {
+                case "HasQuest":
+                    return HasQuest(Quest.GetByName(parameters[0]));
+                case "CompletedQuest":
+                    QuestStatus status = GetQuestStatus(Quest.GetByName(parameters[0]));
+                    if (status == null) return null;
+                    return GetQuestStatus(Quest.GetByName(parameters[0])).IsComplete();
+            }
 
-            return HasQuest(Quest.GetByName(parameters[0]));
+            return null;
         }
     }
 }

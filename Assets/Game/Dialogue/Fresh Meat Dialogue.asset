@@ -18,17 +18,17 @@ MonoBehaviour:
   - e0cd73cc-c55b-4cc1-bf47-e8922d56b181
   - 6668e36c-86f5-43f3-9463-ed26b82347bd
   - 1f6fbfe4-c5e9-4b1f-9b4b-968b106ad6df
+  - 666683f7-63de-4c10-bed3-6e7c354c9e48
   rect:
     serializedVersion: 2
     x: -2
-    y: 193
+    y: 192
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-6313703060218827706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,15 +48,22 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 244
-    y: 368
+    y: 367
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: HasQuest
-    parameters:
-    - Get me some fresh meat
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Get me some fresh meat
+        negate: 0
+      - predicate: CompletedQuest
+        parameters:
+        - Get me some fresh meat
+        negate: 1
 --- !u!114 &-5781758623551084215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,8 +88,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +108,8 @@ MonoBehaviour:
   - {fileID: 463087976934056893}
   - {fileID: -6313703060218827706}
   - {fileID: 9039068337429441973}
+  - {fileID: 9097336102685855160}
+  - {fileID: 8376965862156214929}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &463087976934056893
 MonoBehaviour:
@@ -127,8 +135,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: GiveQuest
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &4270988504180421125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,15 +154,44 @@ MonoBehaviour:
   - 6732eb0a-8f74-4a07-a73e-74ea0de657bc
   rect:
     serializedVersion: 2
-    x: 241
-    y: 127
+    x: 242
+    y: 124
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Get me some fresh meat
+        negate: 1
+--- !u!114 &8376965862156214929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de359a0c10e0e415cad1c338f2ae96f2, type: 3}
+  m_Name: 8e9f7929-f354-48cb-909b-d07c61b12ecd
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Very comfortable! Thank you!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 495
+    y: 492
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &9039068337429441973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,5 +216,44 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
+--- !u!114 &9097336102685855160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de359a0c10e0e415cad1c338f2ae96f2, type: 3}
+  m_Name: 666683f7-63de-4c10-bed3-6e7c354c9e48
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I have a meat!
+  children:
+  - 8e9f7929-f354-48cb-909b-d07c61b12ecd
+  rect:
+    serializedVersion: 2
+    x: 244
+    y: 493
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Get me some fresh meat
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Get me some fresh meat
+        negate: 0
+      - predicate: HasInventoryItem
+        parameters:
+        - a0214d2e-7cb2-4988-9ebe-65cffffd7aa7
+        negate: 0
